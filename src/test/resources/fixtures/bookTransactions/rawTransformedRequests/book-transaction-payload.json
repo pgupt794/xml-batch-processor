@@ -1,0 +1,34 @@
+{
+  "alertDataId": "1111",
+  "alertBookInfo": {
+    "bookId": "12345",
+    "bookName": "Harry Potter and The Philosopher's Stone",
+    "bookGenre": [
+      "Fantasy"
+    ],
+    "bookPublisher": [
+      "Bloomsbury (UK)",
+      "Scholastic (US)"
+    ],
+    "bookPublishingDate": "26 June 1997",
+    "bookAuthor": "J. K. Rowling"
+  },
+  "transactionType": "TRANSACTION_PAYMENT_CANCELLED",
+  "alertBodyInfo": {
+    "alertTransactionCancelled": {
+      "transactionId": "12341234",
+      "transactionCancelReason": "Due to change to your transaction options, your automatic transaction was cancelled.",
+      "transactionMinimumAmount": "23.50",
+      "transactionAmount": "40",
+      "transactionMethodName": "HDFC Bank",
+      "transactionMethodLastFourDigits": "1112",
+      "transactionDate": "2022-10-15",
+      "transactionPayeeName": "John Doe",
+      "transactionPayeeAddress": "PO BOX 23412",
+      "transactionPayeeAddressCity": "Phoenix",
+      "transactionPayeeAddressState": "AZ",
+      "transactionPayeeAddressZip": "1232141",
+      "transactionPayeePhoneNumber": "1234567891"
+    }
+  }
+}
