@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><Alert_Payload>
+    <alert_Data_Id>1111</alert_Data_Id>
+    <Alert_Book_Info>
+        <book_Id>12345</book_Id>
+        <book_Name>Harry Potter and The Philosopher's Stone</book_Name>
+        <book_Genre>
+            <genre>Fantasy</genre>
+        </book_Genre>
+        <book_Publisher>
+            <publisher>Bloomsbury (UK)</publisher>
+            <publisher>Scholastic (US)</publisher>
+        </book_Publisher>
+        <book_Publishing_Date>26 June 1997</book_Publishing_Date>
+        <book_Author>J. K. Rowling</book_Author>
+    </Alert_Book_Info>
+    <Alert_Body_Info>
+        <Alert_Transaction_Cancelled>
+            <transaction_Id>12341234</transaction_Id>
+            <transaction_Cancel_Reason>Due to change to your transaction options, your automatic transaction was cancelled.</transaction_Cancel_Reason>
+            <transaction_Minimum_Amount>23.50</transaction_Minimum_Amount>
+            <transaction_Amount>40</transaction_Amount>
+            <transaction_Method_Name>HDFC Bank</transaction_Method_Name>
+            <transaction_Method_Last_Four_Digits>1112</transaction_Method_Last_Four_Digits>
+            <transaction_Date>2022-10-15</transaction_Date>
+            <transaction_Payee_Name>John Doe</transaction_Payee_Name>
+            <transaction_Payee_Address>PO BOX 23412</transaction_Payee_Address>
+            <transaction_Payee_Address_City>Phoenix</transaction_Payee_Address_City>
+            <transaction_Payee_Address_State>AZ</transaction_Payee_Address_State>
+            <transaction_Payee_Address_Zip>1232141</transaction_Payee_Address_Zip>
+            <transaction_Payee_Phone_Number>1234567891</transaction_Payee_Phone_Number>
+        </Alert_Transaction_Cancelled>
+    </Alert_Body_Info>
+</Alert_Payload>
