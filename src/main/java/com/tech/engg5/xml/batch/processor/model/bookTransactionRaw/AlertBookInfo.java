@@ -5,6 +5,8 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.util.List;
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -19,10 +21,12 @@ public class AlertBookInfo {
   String bookName;
 
   @JacksonXmlElementWrapper(localName = "book_Genre")
-  BookGenre bookGenre;
+  @JacksonXmlProperty(localName = "genre")
+  List<String> bookGenre;
 
   @JacksonXmlElementWrapper(localName = "book_Publisher")
-  BookPublisher bookPublisher;
+  @JacksonXmlProperty(localName = "publisher")
+  List<String> bookPublisher;
 
   @JacksonXmlProperty(localName = "book_Publishing_Date")
   String bookPublishingDate;
