@@ -16,10 +16,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 @ActiveProfiles("test")
-public class BookTransactionPayloadDeserializerTest {
+public class BookTransactionRawFileDeserializerTest {
 
   @Autowired
-  BookTransactionPayloadDeserializer bookTransactionPayloadDeserializer;
+  BookTransactionRawFileDeserializer bookTransactionRawFileDeserializer;
 
   @Test
   @DisplayName("Verify that xml payload should be deserialized to json payload successfully")
@@ -27,10 +27,11 @@ public class BookTransactionPayloadDeserializerTest {
     String incomingRawRequest = Fixture.RAW_REQUESTS.loadFixture("book-transaction-payload.xml");
 
     BookTransactionPayload bookTransactionPayload = Flux.just(incomingRawRequest)
-      .handle(bookTransactionPayloadDeserializer).blockFirst();
+      .handle(bookTransactionRawFileDeserializer).blockFirst();
 
     assert bookTransactionPayload != null;
     Assertions.assertEquals("1111", bookTransactionPayload.getAlertDataId());
+    assert bookTransactionPayload.getAlertBookInfo().getBookPublisher().size() == 2;
   }
 
   @Test
@@ -38,7 +39,7 @@ public class BookTransactionPayloadDeserializerTest {
   void acceptShouldSignalErrorWhenErrorOccurs() {
     String incomingRawRequest = Fixture.RAW_REQUESTS.loadFixture("invalid-book-transaction-payload.xml");
     val verifier = StepVerifier.create(Flux.just(incomingRawRequest)
-      .handle(bookTransactionPayloadDeserializer)).expectSubscription();
+      .handle(bookTransactionRawFileDeserializer)).expectSubscription();
 
     verifier.expectErrorSatisfies(error -> assertThat(error)
       .isInstanceOf(Exception.class)

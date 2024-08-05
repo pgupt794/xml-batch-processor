@@ -17,7 +17,7 @@ import java.util.function.BiConsumer;
 @Component
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-public class BookTransactionPayloadDeserializer
+public class BookTransactionRawFileDeserializer
   implements BiConsumer<String, SynchronousSink<BookTransactionPayload>> {
 
   MappingJackson2XmlHttpMessageConverter mappingJackson2XmlHttpMessageConverter;
