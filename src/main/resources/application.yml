@@ -40,3 +40,25 @@ server:
     include-message: always
     include-binding-errors: always
     include-exception: false
+
+batch-processor:
+  src:
+    local: true
+    local-path: src\test\resources\fixtures\bookTransactions\rawRequests
+  dest:
+    target: S3
+    local-path: 'ENTER LOCAL PATH VALUE'
+  s3:
+    endpoint: 'ENTER ENDPOINT VALUE'
+    region: 'ENTER REGION VALUE'
+    secret-key: 'ENTER SECRET KEY VALUE'
+    access-key: 'ENTER ACCESS KEY VALUE'
+    transaction-raw-bucket: transaction-raw-bucket
+    transaction-extract-bucket: transaction-extract-bucket
+    disable-cert-check: true
+    buffer-size: 50
+    socket-timeout: 240000
+    connection-timeout: 60000
+  retry-config:
+    delay: 5000
+    max-retries: 5

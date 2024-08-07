@@ -5,3 +5,25 @@ spring:
   mongodb:
     embedded:
       version: 4.4.9
+
+batch-processor:
+  src:
+    local: true
+    local-path: 'ENTER LOCAL PATH VALUE'
+  dest:
+    target: LOCAL
+    local-path: 'ENTER LOCAL PATH VALUE'
+  s3:
+    endpoint: dummy
+    region: us-east-1
+    secret-key: dummy
+    access-key: dummy
+    transaction-raw-bucket: transaction-raw-bucket
+    transaction-extract-bucket: transaction-extract-bucket
+    disable-cert-check: true
+    buffer-size: 50
+    socket-timeout: 240000
+    connection-timeout: 60000
+  retry-config:
+    delay: 5000
+    max-retries: 5

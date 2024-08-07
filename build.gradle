@@ -55,7 +55,8 @@ dependencies {
   implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive:3.1.2")
 
   implementation("org.json:json:20231013")
-
+  implementation("com.amazonaws:aws-java-sdk-s3:1.12.425")
+  implementation("jakarta.xml.bind:jakarta.xml.bind-api:4.0.2")
   implementation("com.fasterxml.jackson.core:jackson-databind:2.15.1")
   implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.14.2")
   implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.14.2")
